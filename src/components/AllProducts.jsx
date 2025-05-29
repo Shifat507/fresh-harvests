@@ -53,8 +53,8 @@ const AllProducts = () => {
 console.log('Filtered products:', filteredProducts);
 
   return (
-    <div>
-      <div className='flex justify-center mt-4'>
+    <div className='my-8'>
+      <div className='flex justify-center'>
         {categories.map((category) => (
           <button
             key={category.id}
