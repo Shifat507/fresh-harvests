@@ -2,6 +2,7 @@ import React from 'react';
 import Banner from '../components/Banner';
 import Heading from '../components/Heading';
 import AllProducts from '../components/AllProducts';
+import AboutUs from './AboutUs';
 
 const Home = () => {
     return (
@@ -13,6 +14,11 @@ const Home = () => {
                 {/* All Products */}
                 <div>
                     <AllProducts></AllProducts>
+                </div>
+
+                {/* About Us */}
+                <div className='mt-16'>
+                    <AboutUs></AboutUs>
                 </div>
             </section>
         </div>
