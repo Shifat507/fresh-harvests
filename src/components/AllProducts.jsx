@@ -36,8 +36,8 @@ const AllProducts = () => {
         }
       });
   }, []);
-  console.log(products);
-  console.log(categorySelect);
+  // console.log(products);
+  // console.log(categorySelect);
 
   // Case-insensitive filtering
   const filteredProducts = categorySelect
@@ -49,8 +49,8 @@ const AllProducts = () => {
 
   const visibleProducts = showAll ? filteredProducts : filteredProducts.slice(0, 8);
 
-  console.log('Selected category:', categorySelect);
-console.log('Filtered products:', filteredProducts);
+  // console.log('Selected category:', categorySelect);
+// console.log('Filtered products:', filteredProducts);
 
   return (
     <div className='my-8'>
@@ -59,7 +59,7 @@ console.log('Filtered products:', filteredProducts);
           <button
             key={category.id}
             onClick={() => selectCategory(category)}
-            className={`btn btn-soft mx-1 md:mx-4 ${
+            className={`btn btn-soft md:mx-4 ${
               category.id === categorySelect ? 'bg-[#749b3f] text-white' : ''
             }`}
           >

@@ -15,9 +15,9 @@ const Navbar = () => {
 
     const links = <>
         <li className='md:mx-3'><NavLink to='/'>Home</NavLink></li>
-        <li className='md:mx-3'><NavLink >Shop</NavLink></li>
+        <li className='md:mx-3'><NavLink to='/shop'>Shop</NavLink></li>
         <li className='md:mx-3'><NavLink to='/aboutUs'>About Us</NavLink></li>
-        <li className='md:mx-3'><NavLink>Blog</NavLink></li>
+        <li className='md:mx-3'><NavLink to='/blog'>Blog</NavLink></li>
     </>;
 
     return (
@@ -37,7 +37,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <Link to='/' className="">
-                    <img src={logo} alt="" className='w-44'/>
+                    <img src={logo} alt="" className='w-44' />
                 </Link>
             </div>
 
@@ -48,7 +48,9 @@ const Navbar = () => {
             </div>
 
             <div className="navbar-end space-x-2">
-                <button className="btn"><FaHeart /> Favorites</button>
+                <div className=' hidden md:block'>
+                    <button className="btn"><FaHeart /> Favorites</button>
+                </div>
                 <button className="btn"><FaCartShopping /> Cart</button>
                 <button className="btn" onClick={() => openModal('login')}>Sign in</button>
 

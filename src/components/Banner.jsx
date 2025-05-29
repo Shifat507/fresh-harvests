@@ -19,7 +19,7 @@ const Banner = () => {
                     </p>
                     <button className="btn bg-[#ff6a19] text-white">Shop Now</button>
 
-                    <div className="card bg-[#ebebeb] w-80 shadow-sm md:ms-48 mt-5 p-4">
+                    <div className="card bg-[#ebebeb] w-64 md:w-80 shadow-sm md:ms-48 mt-5 p-4">
                         <div className="flex justify-between items-center">
                             <div>
                                 <h2 className="card-title text-[#212337]">Fresh Salad</h2>

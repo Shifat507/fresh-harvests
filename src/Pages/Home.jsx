@@ -4,6 +4,8 @@ import Heading from '../components/Heading';
 import AllProducts from '../components/AllProducts';
 import AboutUs from './AboutUs';
 import poster from '../assets/banner.png';
+import Testimonial from '../components/Testimonial';
+import Blog from '../components/Blog';
 
 const Home = () => {
     // Countdown state
@@ -43,7 +45,6 @@ const Home = () => {
 
     return (
         <div>
-            <Banner />
             <section className='mt-34'>
                 <Heading
                     subTitle={'Our Products'}
@@ -55,14 +56,16 @@ const Home = () => {
 
                 {/* All Products */}
                 <div>
-                    <AllProducts />
+                    <AllProducts></AllProducts>
                 </div>
-
+            </section>
+            <section>
                 {/* About Us */}
                 <div className='mt-34'>
-                    <AboutUs />
+                    <AboutUs></AboutUs>
                 </div>
-
+            </section>
+            <section>
                 {/* Poster with Countdown */}
                 <div className='mt-36'>
                     <div
@@ -82,7 +85,7 @@ const Home = () => {
                                 {/* Countdown Timer */}
                                 <div className='flex items-center gap-3'>
                                     {/* Days */}
-                                    <div className='p-4 py-5 bg-white w-20 flex justify-center'>
+                                    <div className='p-4 py-5 bg-white w-10 md:w-20 flex justify-center'>
                                         <div>
                                             <p className='text-4xl font-semibold text-center'>
                                                 {String(timeLeft.days).padStart(2, '0')}
@@ -91,7 +94,7 @@ const Home = () => {
                                         </div>
                                     </div>
                                     {/* Hours */}
-                                    <div className='p-4 py-5 bg-white w-20 flex justify-center'>
+                                    <div className='p-4 py-5 bg-white w-10 md:w-20 flex justify-center'>
                                         <div>
                                             <p className='text-4xl font-semibold text-center'>
                                                 {String(timeLeft.hours).padStart(2, '0')}
@@ -100,7 +103,7 @@ const Home = () => {
                                         </div>
                                     </div>
                                     {/* Minutes */}
-                                    <div className='p-4 py-5 bg-white w-20 flex justify-center'>
+                                    <div className='p-4 py-5 bg-white w-10 md:w-20 flex justify-center'>
                                         <div>
                                             <p className='text-4xl font-semibold text-center'>
                                                 {String(timeLeft.minutes).padStart(2, '0')}
@@ -109,7 +112,7 @@ const Home = () => {
                                         </div>
                                     </div>
                                     {/* Seconds */}
-                                    <div className='p-4 py-5 bg-white w-20 flex justify-center'>
+                                    <div className='p-4 py-5 bg-white w-10 md:w-20 flex justify-center'>
                                         <div>
                                             <p className='text-4xl font-semibold text-center'>
                                                 {String(timeLeft.seconds).padStart(2, '0')}
@@ -126,6 +129,15 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
+            </section>
+            <section>
+                {/* Testimonial */}
+                <div className='mt-36'>
+                    <Testimonial></Testimonial>
+                </div>
+            </section>
+            <section>
+                <Blog></Blog>
             </section>
         </div>
     );
