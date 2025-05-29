@@ -5,21 +5,21 @@ import { FaApple, FaGooglePlay } from 'react-icons/fa6';
 import leafImg from '../assets/leaf.png'
 const Banner = () => {
     return (
-        <div className="hero min-h-screen py-10">
-            <div className="hero-content flex-col lg:flex-row-reverse justify-between md:w-11/12">
+        <div className="hero bg-base-200 min-h-screen py-10">
+            <div className="hero-content flex-col lg:flex-row-reverse justify-between md:w-11/12 mx-auto">
                 <img
                     src={BannerImage}
-                    className="w-full max-w-xl lg:max-w-2xl rounded-lg"
+                    className="w-full max-w-xl lg:max-w-2xl rounded-lg lg:ml-25"
                 />
                 <div>
-                    <span className='bg-green-50 text-[#749b3f] px-2 py-1 rounded-md font-semibold'>Welcome to Fresh Harvest</span>
+                    <span className='bg-green-100 text-[#749b3f] px-2 py-1 rounded-md font-semibold'>Welcome to Fresh Harvest</span>
                     <h1 className="text-3xl md:text-5xl font-bold">Fresh Fruits and <br /> Vegetables</h1>
                     <p className="py-6">
                         At Fresh Harvests, we are passionate about providing you with the freshest and most flavorful fruits and vegetables
                     </p>
                     <button className="btn bg-[#ff6a19] text-white">Shop Now</button>
 
-                    <div className="card bg-[#ebebeb] w-80 shadow-sm md:ms-48 md:mt-3 p-4">
+                    <div className="card bg-[#ebebeb] w-80 shadow-sm md:ms-48 mt-5 p-4">
                         <div className="flex justify-between items-center">
                             <div>
                                 <h2 className="card-title text-[#212337]">Fresh Salad</h2>
@@ -34,8 +34,8 @@ const Banner = () => {
                         </div>
                     </div>
 
-                    <div className='relative'>
-                        <div className='absolute bottom-8 -left-10 z-0'>
+                    <div className='relative mt-5'>
+                        <div className='absolute bottom-8 -left-4 md:-left-10 z-0'>
                             <img src={leafImg} alt="" width={75} />
                         </div>
                         <div className='relative z-20'>

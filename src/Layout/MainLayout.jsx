@@ -8,7 +8,7 @@ const MainLayout = () => {
             <header>
                 <Navbar></Navbar>
             </header>
-            <main>
+            <main className='lg:max-w-6xl mx-auto'>
                 <Outlet></Outlet>
             </main>
             <footer>

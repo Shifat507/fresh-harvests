@@ -3,6 +3,8 @@ import {
 } from "react-router-dom";
 import MainLayout from "../Layout/MainLayout";
 import Home from "../Pages/Home";
+import Register from "../components/Register";
+import ProductDetails from "../components/ProductDetails";
 
 
 export const router = createBrowserRouter([
@@ -13,7 +15,17 @@ export const router = createBrowserRouter([
         {
             path: '/',
             element: <Home></Home>
+        },
+        {
+          path: '/register',
+          element: <Register></Register>
+        },
+        {
+          path: '/productDetails/:id',
+          element: <ProductDetails></ProductDetails>,
+          loader : ({params}) => fetch(`https://code-commando.com/api/v1/products/${params.id}`)
         }
+        
     ]
   },
 ]);
