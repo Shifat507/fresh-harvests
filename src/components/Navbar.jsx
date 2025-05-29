@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { FaCartShopping, FaHeart } from 'react-icons/fa6';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import Login from './Login';
 import Register from './Register';
+import logo from '../assets/logo.JPG'
 
 const Navbar = () => {
     const [modalView, setModalView] = useState('login'); // 'login' or 'register'
@@ -13,9 +14,9 @@ const Navbar = () => {
     };
 
     const links = <>
-        <li className='md:mx-3'><NavLink>Home</NavLink></li>
-        <li className='md:mx-3'><NavLink>Shop</NavLink></li>
-        <li className='md:mx-3'><NavLink>About Us</NavLink></li>
+        <li className='md:mx-3'><NavLink to='/'>Home</NavLink></li>
+        <li className='md:mx-3'><NavLink >Shop</NavLink></li>
+        <li className='md:mx-3'><NavLink to='/aboutUs'>About Us</NavLink></li>
         <li className='md:mx-3'><NavLink>Blog</NavLink></li>
     </>;
 
@@ -35,7 +36,9 @@ const Navbar = () => {
                         {links}
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-xl">Fresh Harvests</a>
+                <Link to='/' className="">
+                    <img src={logo} alt="" className='w-44'/>
+                </Link>
             </div>
 
             <div className="navbar-center hidden lg:flex">
