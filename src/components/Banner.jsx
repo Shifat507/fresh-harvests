@@ -6,11 +6,8 @@ import leafImg from '../assets/leaf.png'
 const Banner = () => {
     return (
         <div className="hero bg-base-200 min-h-screen py-10">
-            <div className="hero-content flex-col lg:flex-row-reverse justify-between md:w-11/12 mx-auto">
-                <img
-                    src={BannerImage}
-                    className="w-full max-w-xl lg:max-w-2xl rounded-lg lg:ml-25"
-                />
+            <div className="hero-content flex-col lg:flex-row justify-between md:w-11/12 mx-auto">
+                
                 <div>
                     <span className='bg-green-100 text-[#749b3f] px-2 py-1 rounded-md font-semibold'>Welcome to Fresh Harvest</span>
                     <h1 className="text-3xl md:text-5xl font-bold mt-3">Fresh Fruits and <br /> Vegetables</h1>
@@ -19,17 +16,17 @@ const Banner = () => {
                     </p>
                     <button className="btn bg-[#ff6a19] text-white">Shop Now</button>
 
-                    <div className="card bg-[#ebebeb] w-64 md:w-80 shadow-sm md:ms-48 mt-5 p-4">
+                    <div className="card bg-[#ebebeb] w-72 md:w-80 shadow-sm md:ms-48 mt-5 p-4">
                         <div className="flex justify-between items-center">
                             <div>
                                 <h2 className="card-title text-[#212337]">Fresh Salad</h2>
                                 <p className='text-[#157257] font-semibold text-md'>Up to <span className='text-[#212337] font-bold text-lg'>70% Off</span> </p>
                                 <div className="mt-3">
-                                    <span className="bg-[#157257] px-4 py-1 rounded-2xl font-bold text-sm"><span className='text-white'>CODE :</span> <span className='text-[#fac714] font-bold'>FRESH25</span></span>
+                                    <span className="bg-[#157257] px-1 md:px-4 py-1 rounded-2xl font-bold text-sm"><span className='text-white'>CODE :</span> <span className='text-[#fac714] font-bold'>FRESH25</span></span>
                                 </div>
                             </div>
                             <div>
-                                <img src={dishImg} alt="" className='w-36' />
+                                <img src={dishImg} alt="" className='w-28 md:w-36' />
                             </div>
                         </div>
                     </div>
@@ -47,6 +44,10 @@ const Banner = () => {
                         </div>
                     </div>
                 </div>
+                <img
+                    src={BannerImage}
+                    className="w-full max-w-xl lg:max-w-2xl rounded-lg lg:ml-25"
+                />
             </div>
         </div>
     );

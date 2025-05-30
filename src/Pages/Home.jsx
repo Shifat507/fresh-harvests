@@ -85,7 +85,7 @@ const Home = () => {
                                 {/* Countdown Timer */}
                                 <div className='flex items-center gap-3'>
                                     {/* Days */}
-                                    <div className='p-4 py-5 bg-white w-10 md:w-20 flex justify-center'>
+                                    <div className='p-4 py-4 bg-white w-12 md:w-20 flex justify-center rounded-lg'>
                                         <div>
                                             <p className='text-4xl font-semibold text-center'>
                                                 {String(timeLeft.days).padStart(2, '0')}
@@ -94,7 +94,7 @@ const Home = () => {
                                         </div>
                                     </div>
                                     {/* Hours */}
-                                    <div className='p-4 py-5 bg-white w-10 md:w-20 flex justify-center'>
+                                    <div className='p-4 py-4 bg-white w-12 md:w-20 flex justify-center rounded-lg'>
                                         <div>
                                             <p className='text-4xl font-semibold text-center'>
                                                 {String(timeLeft.hours).padStart(2, '0')}
@@ -103,7 +103,7 @@ const Home = () => {
                                         </div>
                                     </div>
                                     {/* Minutes */}
-                                    <div className='p-4 py-5 bg-white w-10 md:w-20 flex justify-center'>
+                                    <div className='p-4 py-4 bg-white w-12 md:w-20 flex justify-center rounded-lg'>
                                         <div>
                                             <p className='text-4xl font-semibold text-center'>
                                                 {String(timeLeft.minutes).padStart(2, '0')}
@@ -112,12 +112,12 @@ const Home = () => {
                                         </div>
                                     </div>
                                     {/* Seconds */}
-                                    <div className='p-4 py-5 bg-white w-10 md:w-20 flex justify-center'>
+                                    <div className='p-4 py-4 bg-white w-12 md:w-20 flex justify-center rounded-lg'>
                                         <div>
                                             <p className='text-4xl font-semibold text-center'>
                                                 {String(timeLeft.seconds).padStart(2, '0')}
                                             </p>
-                                            <p className='text-md font-semibold text-center'>Second</p>
+                                            <p className='text-md font-semibold text-center'>Sec</p>
                                         </div>
                                     </div>
                                 </div>
