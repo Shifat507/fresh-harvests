@@ -29,9 +29,9 @@
 You can upload images in your GitHub repo and then link them here like so:
 
 ```markdown
-![Banner](https://i.ibb.co/yc58BhhP/banner.png)
-![Products](https://i.ibb.co/7d3nkjTP/Products-SS.jpg)
-![Product Details](https://i.ibb.co/zW1nxCb6/Product-Detailss.jpg)
-![Blogs](https://i.ibb.co/KpcmLDCD/BlogsSS.jpg)
-![About Us](https://i.ibb.co/hJQ9kgNk/About-USSS.jpg)
+![Banner](./src/assets/bannerSS.JPG)
+![Products](./src/assets/ProductsSS.JPG)
+![Product Details](./src/assets/ProductDetailss.JPG)
+![Blogs](./src/assets/BlogsSS.JPG)
+![About Us](./src/assets/AboutUSSS.JPG)
 
