@@ -1,12 +1,37 @@
-# React + Vite
+# 🥦 Fresh Harvests
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Fresh Harvests** is a modern web application built for a seamless and engaging online shopping experience, focusing on fresh produce and goods. The platform offers user authentication, product detail viewing, blog insights, and a functional add-to-cart system.
 
-Currently, two official plugins are available:
+🔗 **Live Website:** [fresh-harvests-76edd.web.app](https://fresh-harvests-76edd.web.app/)  
+📁 **GitHub Repository:** [github.com/Shifat507/fresh-harvests](https://github.com/Shifat507/fresh-harvests)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🚀 Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- 🔐 **User Authentication**  
+  Users can register and log in securely to access personalized features.
+
+- 🛒 **Product Details**  
+  View detailed information about each product including images, descriptions, and pricing.
+
+- 📝 **Read Blogs**  
+  Stay updated with fresh and insightful blog posts on healthy living and food tips.
+
+- ➕ **Add to Cart**  
+  Easily add your favorite items to the cart for a smooth shopping experience.
+
+---
+
+## 🖼️ Screenshots
+
+> Include screenshots here to showcase your UI/UX.  
+You can upload images in your GitHub repo and then link them here like so:
+
+```markdown
+![Banner](https://i.ibb.co/yc58BhhP/banner.png)
+![Products](https://i.ibb.co/7d3nkjTP/Products-SS.jpg)
+![Product Details](https://i.ibb.co/zW1nxCb6/Product-Detailss.jpg)
+![Blogs](https://i.ibb.co/KpcmLDCD/BlogsSS.jpg)
+![About Us](https://i.ibb.co/hJQ9kgNk/About-USSS.jpg)
+
