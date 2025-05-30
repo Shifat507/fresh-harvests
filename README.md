@@ -28,10 +28,16 @@
 > Include screenshots here to showcase your UI/UX.  
 You can upload images in your GitHub repo and then link them here like so:
 
-```markdown
+## 📸 Screenshots
+
+### Hero
 ![Banner](./src/assets/bannerSS.JPG)
+### Products
 ![Products](./src/assets/ProductsSS.JPG)
+### Product Details
 ![Product Details](./src/assets/ProductDetailss.JPG)
+### Blogs
 ![Blogs](./src/assets/BlogsSS.JPG)
+### About Us
 ![About Us](./src/assets/AboutUSSS.JPG)
 
