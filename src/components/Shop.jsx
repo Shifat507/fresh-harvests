@@ -6,7 +6,7 @@ import Heading from './Heading';
 
 const Shop = () => {
     return (
-        <div>
+        <div className='my-16'>
             <Heading
                 subTitle={'Our Products'}
                 title={'Our Fresh Products'}

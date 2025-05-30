@@ -13,7 +13,7 @@ const Banner = () => {
                 />
                 <div>
                     <span className='bg-green-100 text-[#749b3f] px-2 py-1 rounded-md font-semibold'>Welcome to Fresh Harvest</span>
-                    <h1 className="text-3xl md:text-5xl font-bold">Fresh Fruits and <br /> Vegetables</h1>
+                    <h1 className="text-3xl md:text-5xl font-bold mt-3">Fresh Fruits and <br /> Vegetables</h1>
                     <p className="py-6">
                         At Fresh Harvests, we are passionate about providing you with the freshest and most flavorful fruits and vegetables
                     </p>

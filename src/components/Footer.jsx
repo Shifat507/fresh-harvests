@@ -14,7 +14,7 @@ const Footer = () => {
                     <div className='mt-30'>
                         <h4 className='text-md font-semibold mb-3'>Download App:</h4>
                         <div>
-                            <button className="btn btn-neutral mr-3"><FaGooglePlay size={20} /> Google Play</button>
+                            <button className="btn btn-neutral mr-3 mb-3"><FaGooglePlay size={20} /> Google Play</button>
                             <button className="btn btn-neutral"><FaApple size={20} /> Apple Store</button>
                         </div>
                     </div>

@@ -1,29 +1,43 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { FaCartShopping, FaHeart } from 'react-icons/fa6';
 import { Link, NavLink } from 'react-router-dom';
 import Login from './Login';
 import Register from './Register';
-import logo from '../assets/logo.JPG'
+import logo from '../assets/logo.JPG';
+import { AuthContext } from '../providers/Authproviders';
 
 const Navbar = () => {
     const [modalView, setModalView] = useState('login'); // 'login' or 'register'
+    const { user, logOut } = useContext(AuthContext);
 
     const openModal = (view) => {
         setModalView(view);
         document.getElementById('my_modal_3').showModal();
     };
 
-    const links = <>
-        <li className='md:mx-3'><NavLink to='/'>Home</NavLink></li>
-        <li className='md:mx-3'><NavLink to='/shop'>Shop</NavLink></li>
-        <li className='md:mx-3'><NavLink to='/aboutUs'>About Us</NavLink></li>
-        <li className='md:mx-3'><NavLink to='/blog'>Blog</NavLink></li>
-    </>;
+    const handleSignOut = () => {
+        logOut()
+            .then(() => { })
+            .catch(error => console.log(error));
+    };
+
+    const links = (
+        <>
+            <li className='md:mx-3'><NavLink to='/'>Home</NavLink></li>
+            <li className='md:mx-3'><NavLink to='/shop'>Shop</NavLink></li>
+            <li className='md:mx-3'><NavLink to='/aboutUs'>About Us</NavLink></li>
+            <li className='md:mx-3'><NavLink to='/blog'>Blog</NavLink></li>
+        </>
+    );
+
+    const closeModal = () => {
+        const modal = document.getElementById('my_modal_3');
+        if (modal) modal.close();
+    };
 
     return (
         <div className="navbar bg-base-100 shadow-sm">
             <div className="navbar-start">
-                {/* mobile menu */}
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none"
@@ -36,8 +50,8 @@ const Navbar = () => {
                         {links}
                     </ul>
                 </div>
-                <Link to='/' className="">
-                    <img src={logo} alt="" className='w-44' />
+                <Link to='/'>
+                    <img src={logo} alt="Logo" className='w-44' />
                 </Link>
             </div>
 
@@ -48,11 +62,15 @@ const Navbar = () => {
             </div>
 
             <div className="navbar-end space-x-2">
-                <div className=' hidden md:block'>
+                <div className='hidden md:block'>
                     <button className="btn"><FaHeart /> Favorites</button>
                 </div>
                 <button className="btn"><FaCartShopping /> Cart</button>
-                <button className="btn" onClick={() => openModal('login')}>Sign in</button>
+                {
+                    user
+                        ? <button onClick={handleSignOut} className="btn">Sign out</button>
+                        : <button className="btn" onClick={() => openModal('login')}>Sign in</button>
+                }
 
                 {/* Modal */}
                 <dialog id="my_modal_3" className="modal">
@@ -62,8 +80,14 @@ const Navbar = () => {
                         </form>
                         {
                             modalView === 'login'
-                                ? <Login switchToRegister={() => setModalView('register')} />
-                                : <Register switchToLogin={() => setModalView('login')} />
+                                ? <Login
+                                    switchToRegister={() => setModalView('register')}
+                                    closeModal={closeModal}
+                                />
+                                : <Register
+                                    switchToLogin={() => setModalView('login')}
+                                    closeModal={closeModal}
+                                />
                         }
                     </div>
                 </dialog>
