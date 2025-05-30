@@ -1,65 +1,44 @@
 import React, { useEffect, useState } from 'react';
 import Product from './Product';
+import { useGetCategoriesQuery, useGetProductsQuery } from '../redux/api/apiSlice';
 
 const AllProducts = () => {
-  const [categories, setCategories] = useState([]);
+  const { data: categoryData, isLoading: categoryLoading } = useGetCategoriesQuery();
+  const { data: productData, isLoading: productLoading } = useGetProductsQuery();
+
   const [categorySelect, setCategorySelect] = useState('');
-  const [products, setProducts] = useState([]);
   const [showAll, setShowAll] = useState(false);
+
+  const categories = categoryData?.data || [];
+  const products = productData?.data || [];
+
+  useEffect(() => {
+    if (categories.length > 0 && !categorySelect) {
+      setCategorySelect(categories[0].id);
+    }
+  }, [categories]);
 
   const selectCategory = (category) => {
     setCategorySelect(category.id);
-    setShowAll(false); // reset showAll 
+    setShowAll(false);
   };
 
-  // Fetch categories and initialize selected category
-  useEffect(() => {
-    fetch('https://code-commando.com/api/v1/category')
-      .then(res => res.json())
-      .then(data => {
-        if (data?.data) {
-          setCategories(data.data);
-          if (data.data.length > 0) {
-            setCategorySelect(data.data[0].id); 
-          }
-        }
-      });
-  }, []);
-
-  // Fetch products
-  useEffect(() => {
-    fetch('https://code-commando.com/api/v1/products')
-      .then(res => res.json())
-      .then(data => {
-        if (data?.data) {
-          setProducts(data.data);
-        }
-      });
-  }, []);
-  // console.log(products);
-  // console.log(categorySelect);
-
-  // Case-insensitive filtering
   const filteredProducts = categorySelect
-    ? products.filter(
-        (product) =>
-          product?.categoryId === categorySelect
-      )
+    ? products.filter((product) => product?.categoryId === categorySelect)
     : products;
 
   const visibleProducts = showAll ? filteredProducts : filteredProducts.slice(0, 8);
 
-  // console.log('Selected category:', categorySelect);
-// console.log('Filtered products:', filteredProducts);
+  if (categoryLoading || productLoading) return <p className='text-center'>Loading...</p>;
 
   return (
     <div className='my-8'>
-      <div className='flex justify-center'>
+      <div className='flex justify-center flex-wrap gap-2'>
         {categories.map((category) => (
           <button
             key={category.id}
             onClick={() => selectCategory(category)}
-            className={`btn btn-soft md:mx-4 ${
+            className={`btn btn-soft ${
               category.id === categorySelect ? 'bg-[#749b3f] text-white' : ''
             }`}
           >

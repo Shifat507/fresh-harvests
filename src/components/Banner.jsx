@@ -6,7 +6,7 @@ import leafImg from '../assets/leaf.png'
 const Banner = () => {
     return (
         <div className="hero bg-base-200 min-h-screen py-10">
-            <div className="hero-content flex-col lg:flex-row justify-between md:w-11/12 mx-auto">
+            <div className="hero-content flex-col lg:flex-row justify-between w-full md:w-11/12 mx-auto">
                 
                 <div>
                     <span className='bg-green-100 text-[#749b3f] px-2 py-1 rounded-md font-semibold'>Welcome to Fresh Harvest</span>

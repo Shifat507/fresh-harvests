@@ -74,7 +74,7 @@ const Home = () => {
                             backgroundImage: `url(${poster})`,
                         }}
                     >
-                        <div className="hero-content flex justify-start items-start w-full px-10">
+                        <div className="hero-content flex justify-start items-start w-full px-2 md:px-10">
                             <div className="max-w-xl text-left">
                                 <span className='bg-green-100 text-[#749b3f] px-2 py-1 rounded-md font-semibold'>Special Offer</span>
                                 <h1 className="text-3xl md:text-5xl font-bold mt-4">Seasonal Fruit Bundle</h1>
@@ -83,41 +83,41 @@ const Home = () => {
                                 </p>
 
                                 {/* Countdown Timer */}
-                                <div className='flex items-center gap-3'>
+                                <div className='flex items-center gap-1 md:gap-3'>
                                     {/* Days */}
-                                    <div className='p-4 py-4 bg-white w-12 md:w-20 flex justify-center rounded-lg'>
+                                    <div className='px-8 py-2 bg-white w-8 md:w-20 flex justify-center rounded-lg'>
                                         <div>
-                                            <p className='text-4xl font-semibold text-center'>
+                                            <p className='text-2xl  md:text-4xl font-semibold text-center'>
                                                 {String(timeLeft.days).padStart(2, '0')}
                                             </p>
-                                            <p className='text-md font-semibold text-center'>Days</p>
+                                            <p className='text-sm md:text-md font-semibold text-center'>Days</p>
                                         </div>
                                     </div>
                                     {/* Hours */}
-                                    <div className='p-4 py-4 bg-white w-12 md:w-20 flex justify-center rounded-lg'>
+                                    <div className='px-8 py-2 bg-white w-8 md:w-20 flex justify-center rounded-lg'>
                                         <div>
-                                            <p className='text-4xl font-semibold text-center'>
+                                            <p className='text-2xl  md:text-4xl font-semibold text-center'>
                                                 {String(timeLeft.hours).padStart(2, '0')}
                                             </p>
-                                            <p className='text-md font-semibold text-center'>Hour</p>
+                                            <p className='text-sm md:text-md font-semibold text-center'>Hour</p>
                                         </div>
                                     </div>
                                     {/* Minutes */}
-                                    <div className='p-4 py-4 bg-white w-12 md:w-20 flex justify-center rounded-lg'>
+                                    <div className='px-8 py-2 bg-white w-8 md:w-20 flex justify-center rounded-lg'>
                                         <div>
-                                            <p className='text-4xl font-semibold text-center'>
+                                            <p className='text-2xl  md:text-4xl font-semibold text-center'>
                                                 {String(timeLeft.minutes).padStart(2, '0')}
                                             </p>
-                                            <p className='text-md font-semibold text-center'>Min</p>
+                                            <p className='text-sm md:text-md font-semibold text-center'>Min</p>
                                         </div>
                                     </div>
                                     {/* Seconds */}
-                                    <div className='p-4 py-4 bg-white w-12 md:w-20 flex justify-center rounded-lg'>
+                                    <div className='px-8 py-2 bg-white w-8 md:w-20 flex justify-center rounded-lg'>
                                         <div>
-                                            <p className='text-4xl font-semibold text-center'>
+                                            <p className='text-2xl  md:text-4xl font-semibold text-center'>
                                                 {String(timeLeft.seconds).padStart(2, '0')}
                                             </p>
-                                            <p className='text-md font-semibold text-center'>Sec</p>
+                                            <p className='text-sm md:text-md font-semibold text-center'>Sec</p>
                                         </div>
                                     </div>
                                 </div>

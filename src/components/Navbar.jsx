@@ -50,7 +50,7 @@ const Navbar = () => {
                         {links}
                     </ul>
                 </div>
-                <Link to='/'>
+                <Link to='/' className='hidden md:block'>
                     <img src={logo} alt="Logo" className='w-44' />
                 </Link>
             </div>
