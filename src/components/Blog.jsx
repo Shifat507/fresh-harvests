@@ -17,9 +17,9 @@ const Blog = () => {
                     <figure>
                         <img
                             src={blog1}
-                            alt="Shoes" className='rounded-2xl'/>
+                            alt="Shoes" className='rounded-t-2xl'/>
                     </figure>
-                    <div className="card-body px-0">
+                    <div className="card-body px-3">
                         <span className='text-gray-600 font-semibold'>May 23, 2024</span>
                         <p className='text-lg font-semibold'>Exploring Seasonal Delights: A Guide to What's Fresh Right Now</p>
                         <div className="card-actions justify-start">
@@ -31,9 +31,9 @@ const Blog = () => {
                     <figure>
                         <img
                             src={blog2}
-                            alt="Shoes" className='rounded-2xl'/>
+                            alt="Shoes" className='rounded-t-2xl'/>
                     </figure>
-                    <div className="card-body px-0">
+                    <div className="card-body px-3">
                         <span className='text-gray-600 font-semibold'>May 23, 2024</span>
                         <p className='text-lg font-semibold'>Mastering Salad Creations: Tips and Tricks for Building Delicious and Nutritious Salads"</p>
                         <div className="card-actions justify-start">
@@ -45,9 +45,9 @@ const Blog = () => {
                     <figure>
                         <img
                             src={blog3}
-                            alt="Shoes" className='rounded-2xl'/>
+                            alt="Shoes" className='rounded-t-2xl'/>
                     </figure>
-                    <div className="card-body px-0">
+                    <div className="card-body px-3">
                         <span className='text-gray-600 font-semibold'>May 23, 2024</span>
                         <p className='text-lg font-semibold'>The Art of Meal Prepping: How to Save Time and Eat Healthy Throughout the Week</p>
                         <div className="card-actions justify-start">

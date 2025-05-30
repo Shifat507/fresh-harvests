@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 const Product = ({product}) => {
     const {id, images, productName, price} = product;
     return (
-        <div className="card w-36 md:w-60 bg-base-100 shadow-md hover:shadow-lg transition-all duration-300 border border-gray-200 mx-auto">
-            <figure className="p-4">
+        <div className="card w-32 md:w-64 bg-base-100 shadow-md hover:shadow-lg transition-all duration-300 border border-gray-200 mx-auto">
+            <figure className="p-2 md:p-4">
                 <img
                     src={images}
                     alt={productName}
