@@ -1,43 +1,84 @@
 # 🥦 Fresh Harvests
 
-**Fresh Harvests** is a modern web application built for a seamless and engaging online shopping experience, focusing on fresh produce and goods. The platform offers user authentication, product detail viewing, blog insights, and a functional add-to-cart system.
+**Fresh Harvests** is a modern and responsive web application designed for a smooth and engaging online shopping experience, focusing on fresh produce and healthy living. It features user authentication, product details, a blog section, and a working add-to-cart system.
 
-🔗 **Live Website:** [fresh-harvests-76edd.web.app](https://fresh-harvests-76edd.web.app/)  
-📁 **GitHub Repository:** [github.com/Shifat507/fresh-harvests](https://github.com/Shifat507/fresh-harvests)
+## 🔗 Live Site
 
----
+👉 [Visit Fresh Harvests](https://fresh-harvests-76edd.web.app/)
 
-## 🚀 Features
+## 📂 GitHub Repository
 
-- 🔐 **User Authentication**  
-  Users can register and log in securely to access personalized features.
-
-- 🛒 **Product Details**  
-  View detailed information about each product including images, descriptions, and pricing.
-
-- 📝 **Read Blogs**  
-  Stay updated with fresh and insightful blog posts on healthy living and food tips.
-
-- ➕ **Add to Cart**  
-  Easily add your favorite items to the cart for a smooth shopping experience.
+🔗 [GitHub - Shifat507/fresh-harvests](https://github.com/Shifat507/fresh-harvests)
 
 ---
 
-## 🖼️ Screenshots
+## ✨ Features
 
-> Include screenshots here to showcase your UI/UX.  
-You can upload images in your GitHub repo and then link them here like so:
+- 🔐 Secure user registration and login
+- 🛍️ Browse all fresh products with details
+- ➕ Add products to your shopping cart
+- 📝 Read blogs on health and lifestyle
+- ✅ Mobile-friendly and responsive UI
+
+---
 
 ## 📸 Screenshots
 
-### Hero
+### 🏠 Hero Section  
 ![Banner](./src/assets/bannerSS.JPG)
-### Products
+
+### 🛒 Products  
 ![Products](./src/assets/ProductsSS.JPG)
-### Product Details
+
+### 🔍 Product Details  
 ![Product Details](./src/assets/ProductDetailss.JPG)
-### Blogs
+
+### 📰 Blogs  
 ![Blogs](./src/assets/BlogsSS.JPG)
-### About Us
+
+### ℹ️ About Us  
 ![About Us](./src/assets/AboutUSSS.JPG)
 
+---
+
+## 🚀 Technologies Used
+
+- **React.js** – Frontend framework  
+- **React Router DOM** – Client-side routing  
+- **Redux Toolkit** – State management  
+- **Firebase** – Authentication & Hosting  
+- **Axios** – API handling  
+- **Tailwind CSS & DaisyUI** – Styling  
+- **SweetAlert2** – Alert popups  
+- **React Icons** – Icon library   
+- **Vite** – Build tool  
+
+---
+
+## 🛠️ Setup & Run Locally
+
+```bash
+# Clone the repository
+git clone https://github.com/Shifat507/fresh-harvests.git
+
+# Navigate into the project directory
+cd fresh-harvests
+
+# Install dependencies
+npm install
+
+## Run the App
+npm run dev
+npm run build
+
+# Install Firebase CLI (if not installed)
+npm install -g firebase-tools
+
+# Login to Firebase
+firebase login
+
+# Initialize Firebase project (only once)
+firebase init
+
+# Deploy to Firebase Hosting
+firebase deploy
